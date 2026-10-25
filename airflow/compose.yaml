@@ -1,0 +1,74 @@
+
+services:
+  airflow-db:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow_local_password
+      POSTGRES_DB: airflow
+    volumes:
+      - airflow_db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U airflow -d airflow"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  airflow:
+    image: apache/airflow:2.10.5
+    depends_on:
+      airflow-db:
+        condition: service_healthy
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow_local_password@airflow-db:5432/airflow
+      AIRFLOW__CORE__FERNET_KEY: ""
+      AIRFLOW__WEBSERVER__SECRET_KEY: local-development-only-key
+      AIRFLOW__WEBSERVER__EXPOSE_CONFIG: "false"
+    command: >
+      bash -c "airflow db migrate &&
+      (airflow users create
+      --username admin
+      --password admin
+      --firstname Local
+      --lastname Admin
+      --role Admin
+      --email admin@example.com || true) &&
+      airflow webserver"
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./dags:/opt/airflow/dags
+    networks:
+      - default
+      - telemetry_network
+    restart: unless-stopped
+
+
+  airflow-scheduler:
+    image: apache/airflow:2.10.5
+    depends_on:
+      airflow-db:
+        condition: service_healthy
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: ${AIRFLOW__DATABASE__SQL_ALCHEMY_CONN}
+      AIRFLOW__CORE__FERNET_KEY: ""
+    command: scheduler
+    volumes:
+      - ./dags:/opt/airflow/dags
+    networks:
+      - default
+      - telemetry_network
+    restart: unless-stopped
+
+volumes:
+  airflow_db_data:
+
+networks:
+  telemetry_network:
+    external: true
+    name: automotivetelemetrydataplatform_default

@@ -1,7 +1,19 @@
-
+# Python
 .venv/
 __pycache__/
 *.py[cod]
-.env
 .pytest_cache/
+
+# Secrets and environment files
+.env
+.env.*
+!.env.example
+
+# Local databases and logs
+*.db
+*.sqlite
+*.sqlite3
+*.log
+
+# macOS
 .DS_Store
