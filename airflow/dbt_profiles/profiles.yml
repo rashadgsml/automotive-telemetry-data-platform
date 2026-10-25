@@ -1,0 +1,12 @@
+telemetry_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: db
+      port: 5432
+      user: telemetry_user
+      password: "{{ env_var('TELEMETRY_DB_PASSWORD') }}"
+      dbname: telemetry_db
+      schema: public
+      threads: 4

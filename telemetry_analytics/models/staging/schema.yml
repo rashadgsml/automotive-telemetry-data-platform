@@ -1,0 +1,43 @@
+
+version: 2
+
+models:
+  - name: stg_telemetry
+    description: "Staging model for vehicle telemetry records."
+
+    columns:
+      - name: telemetry_id
+        description: "Unique identifier for each telemetry record."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: vehicle_id
+        description: "Identifier of the vehicle."
+        data_tests:
+          - not_null
+
+      - name: reading_timestamp
+        description: "Timestamp when the telemetry was recorded."
+        data_tests:
+          - not_null
+
+      - name: speed_kmh
+        data_tests:
+          - not_null
+
+      - name: engine_temp_c
+        data_tests:
+          - not_null
+
+      - name: battery_voltage_v
+        data_tests:
+          - not_null
+
+      - name: fuel_level_pct
+        data_tests:
+          - not_null
+
+      - name: odometer_km
+        data_tests:
+          - not_null
