@@ -1,0 +1,31 @@
+[0m10:28:22.614255 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c2e9fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d4e3750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d4e3b10>]}
+
+
+============================== 10:28:22.617515 | ff7af349-8fb9-4636-b22c-60c56791f17c ==============================
+[0m10:28:22.617515 [info ] [MainThread]: Running with dbt=1.11.16
+[0m10:28:22.617817 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'fail_fast': 'False', 'version_check': 'True', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'warn_error': 'None', 'invocation_command': 'dbt init telemetry_analytics', 'log_path': 'logs', 'debug': 'False', 'static_parser': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'log_cache_events': 'False', 'introspect': 'True', 'target_path': 'None', 'partial_parse': 'True', 'profiles_dir': '/Users/rashadgasimli/.dbt', 'quiet': 'False', 'log_format': 'default', 'use_experimental_parser': 'False', 'write_json': 'True', 'empty': 'None'}
+[0m10:28:22.623605 [info ] [MainThread]: Creating dbt configuration folder at /Users/rashadgasimli/.dbt
+[0m10:28:22.624422 [debug] [MainThread]: Starter project path: /Users/rashadgasimli/Desktop/projects/Automotive Telemetry Data Platform/.venv/lib/python3.13/site-packages/dbt/include/starter_project
+[0m10:28:22.627505 [info ] [MainThread]: 
+Your new dbt project "telemetry_analytics" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m10:28:22.627651 [info ] [MainThread]: Setting up your profile.
+[0m10:32:16.248886 [info ] [MainThread]: Profile telemetry_analytics written to /Users/rashadgasimli/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m10:32:16.267916 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 233.6969, "process_in_blocks": "0", "process_kernel_time": 0.117503, "process_mem_max_rss": "116310016", "process_out_blocks": "0", "process_user_time": 0.67497}
+[0m10:32:16.268323 [debug] [MainThread]: Command `dbt init` succeeded at 10:32:16.268252 after 233.70 seconds
+[0m10:32:16.268524 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d5ae780>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d522f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d509d00>]}
+[0m10:32:16.268723 [debug] [MainThread]: Flushing usage events
+[0m10:32:17.144470 [debug] [MainThread]: An error was encountered while trying to flush usage events

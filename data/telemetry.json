@@ -1,0 +1,650 @@
+[
+  {
+    "vehicle_id": "VH-1001",
+    "timestamp": "2026-10-20T00:00:00Z",
+    "speed_kmh": 83.1,
+    "engine_temp_c": 75.8,
+    "battery_voltage_v": 12.54,
+    "fuel_level_pct": 26.2,
+    "odometer_km": 25000.0
+  },
+  {
+    "vehicle_id": "VH-1001",
+    "timestamp": "2026-10-20T01:00:00Z",
+    "speed_kmh": 88.0,
+    "engine_temp_c": 101.8,
+    "battery_voltage_v": 12.03,
+    "fuel_level_pct": 45.1,
+    "odometer_km": 25000.2
+  },
+  {
+    "vehicle_id": "VH-1001",
+    "timestamp": "2026-10-20T02:00:00Z",
+    "speed_kmh": 28.4,
+    "engine_temp_c": 90.2,
+    "battery_voltage_v": 11.87,
+    "fuel_level_pct": 23.9,
+    "odometer_km": 25006.6
+  },
+  {
+    "vehicle_id": "VH-1001",
+    "timestamp": "2026-10-20T03:00:00Z",
+    "speed_kmh": 70.8,
+    "engine_temp_c": 81.6,
+    "battery_voltage_v": 13.39,
+    "fuel_level_pct": 81.9,
+    "odometer_km": 25000.4
+  },
+  {
+    "vehicle_id": "VH-1001",
+    "timestamp": "2026-10-20T04:00:00Z",
+    "speed_kmh": 104.8,
+    "engine_temp_c": 95.9,
+    "battery_voltage_v": 12.72,
+    "fuel_level_pct": 19.8,
+    "odometer_km": 25019.2
+  },
+  {
+    "vehicle_id": "VH-1001",
+    "timestamp": "2026-10-20T05:00:00Z",
+    "speed_kmh": 43.8,
+    "engine_temp_c": 77.8,
+    "battery_voltage_v": 12.06,
+    "fuel_level_pct": 85.5,
+    "odometer_km": 25015.3
+  },
+  {
+    "vehicle_id": "VH-1001",
+    "timestamp": "2026-10-20T06:00:00Z",
+    "speed_kmh": 104.9,
+    "engine_temp_c": 96.9,
+    "battery_voltage_v": 13.25,
+    "fuel_level_pct": 97.4,
+    "odometer_km": 25011.7
+  },
+  {
+    "vehicle_id": "VH-1001",
+    "timestamp": "2026-10-20T07:00:00Z",
+    "speed_kmh": 71.8,
+    "engine_temp_c": 99.9,
+    "battery_voltage_v": 13.47,
+    "fuel_level_pct": 86.9,
+    "odometer_km": 25020.5
+  },
+  {
+    "vehicle_id": "VH-1001",
+    "timestamp": "2026-10-20T08:00:00Z",
+    "speed_kmh": 91.6,
+    "engine_temp_c": 76.4,
+    "battery_voltage_v": 12.42,
+    "fuel_level_pct": 32.5,
+    "odometer_km": 25003.9
+  },
+  {
+    "vehicle_id": "VH-1001",
+    "timestamp": "2026-10-20T09:00:00Z",
+    "speed_kmh": 30.3,
+    "engine_temp_c": 78.0,
+    "battery_voltage_v": 12.55,
+    "fuel_level_pct": 65.4,
+    "odometer_km": 25017.0
+  },
+  {
+    "vehicle_id": "VH-1001",
+    "timestamp": "2026-10-20T10:00:00Z",
+    "speed_kmh": 48.1,
+    "engine_temp_c": 81.3,
+    "battery_voltage_v": 12.52,
+    "fuel_level_pct": 94.0,
+    "odometer_km": 25032.8
+  },
+  {
+    "vehicle_id": "VH-1001",
+    "timestamp": "2026-10-20T11:00:00Z",
+    "speed_kmh": 79.2,
+    "engine_temp_c": 80.1,
+    "battery_voltage_v": 13.77,
+    "fuel_level_pct": 20.5,
+    "odometer_km": 25021.6
+  },
+  {
+    "vehicle_id": "VH-1001",
+    "timestamp": "2026-10-20T12:00:00Z",
+    "speed_kmh": 128.6,
+    "engine_temp_c": 94.2,
+    "battery_voltage_v": 13.3,
+    "fuel_level_pct": 70.0,
+    "odometer_km": 25050.8
+  },
+  {
+    "vehicle_id": "VH-1001",
+    "timestamp": "2026-10-20T13:00:00Z",
+    "speed_kmh": 100.9,
+    "engine_temp_c": 81.9,
+    "battery_voltage_v": 11.89,
+    "fuel_level_pct": 35.0,
+    "odometer_km": 25018.4
+  },
+  {
+    "vehicle_id": "VH-1001",
+    "timestamp": "2026-10-20T14:00:00Z",
+    "speed_kmh": 27.4,
+    "engine_temp_c": 103.3,
+    "battery_voltage_v": 14.17,
+    "fuel_level_pct": 34.9,
+    "odometer_km": 25046.4
+  },
+  {
+    "vehicle_id": "VH-1001",
+    "timestamp": "2026-10-20T15:00:00Z",
+    "speed_kmh": 51.4,
+    "engine_temp_c": 102.4,
+    "battery_voltage_v": 13.04,
+    "fuel_level_pct": 30.2,
+    "odometer_km": 25019.6
+  },
+  {
+    "vehicle_id": "VH-1001",
+    "timestamp": "2026-10-20T16:00:00Z",
+    "speed_kmh": 73.0,
+    "engine_temp_c": 82.9,
+    "battery_voltage_v": 13.38,
+    "fuel_level_pct": 90.3,
+    "odometer_km": 25032.9
+  },
+  {
+    "vehicle_id": "VH-1001",
+    "timestamp": "2026-10-20T17:00:00Z",
+    "speed_kmh": 28.5,
+    "engine_temp_c": 104.9,
+    "battery_voltage_v": 13.18,
+    "fuel_level_pct": 13.6,
+    "odometer_km": 25005.6
+  },
+  {
+    "vehicle_id": "VH-1001",
+    "timestamp": "2026-10-20T18:00:00Z",
+    "speed_kmh": 14.3,
+    "engine_temp_c": 93.8,
+    "battery_voltage_v": 13.94,
+    "fuel_level_pct": 45.1,
+    "odometer_km": 25007.4
+  },
+  {
+    "vehicle_id": "VH-1001",
+    "timestamp": "2026-10-20T19:00:00Z",
+    "speed_kmh": 49.6,
+    "engine_temp_c": 104.9,
+    "battery_voltage_v": 13.23,
+    "fuel_level_pct": 97.3,
+    "odometer_km": 25082.0
+  },
+  {
+    "vehicle_id": "VH-1001",
+    "timestamp": "2026-10-20T20:00:00Z",
+    "speed_kmh": 1.5,
+    "engine_temp_c": 96.6,
+    "battery_voltage_v": 13.64,
+    "fuel_level_pct": 56.0,
+    "odometer_km": 25028.1
+  },
+  {
+    "vehicle_id": "VH-1001",
+    "timestamp": "2026-10-20T21:00:00Z",
+    "speed_kmh": 83.3,
+    "engine_temp_c": 78.3,
+    "battery_voltage_v": 12.97,
+    "fuel_level_pct": 48.1,
+    "odometer_km": 25100.2
+  },
+  {
+    "vehicle_id": "VH-1001",
+    "timestamp": "2026-10-20T22:00:00Z",
+    "speed_kmh": 113.9,
+    "engine_temp_c": 82.9,
+    "battery_voltage_v": 13.15,
+    "fuel_level_pct": 22.0,
+    "odometer_km": 25100.6
+  },
+  {
+    "vehicle_id": "VH-1001",
+    "timestamp": "2026-10-20T23:00:00Z",
+    "speed_kmh": 113.2,
+    "engine_temp_c": 84.0,
+    "battery_voltage_v": 13.53,
+    "fuel_level_pct": 62.9,
+    "odometer_km": 25019.5
+  },
+  {
+    "vehicle_id": "VH-1002",
+    "timestamp": "2026-10-20T00:01:00Z",
+    "speed_kmh": 99.1,
+    "engine_temp_c": 91.2,
+    "battery_voltage_v": 13.9,
+    "fuel_level_pct": 55.4,
+    "odometer_km": 25500.0
+  },
+  {
+    "vehicle_id": "VH-1002",
+    "timestamp": "2026-10-20T01:01:00Z",
+    "speed_kmh": 42.1,
+    "engine_temp_c": 75.6,
+    "battery_voltage_v": 14.31,
+    "fuel_level_pct": 88.5,
+    "odometer_km": 25504.2
+  },
+  {
+    "vehicle_id": "VH-1002",
+    "timestamp": "2026-10-20T02:01:00Z",
+    "speed_kmh": 40.0,
+    "engine_temp_c": 76.7,
+    "battery_voltage_v": 14.17,
+    "fuel_level_pct": 95.0,
+    "odometer_km": 25501.0
+  },
+  {
+    "vehicle_id": "VH-1002",
+    "timestamp": "2026-10-20T03:01:00Z",
+    "speed_kmh": 63.2,
+    "engine_temp_c": 77.1,
+    "battery_voltage_v": 13.85,
+    "fuel_level_pct": 77.8,
+    "odometer_km": 25502.2
+  },
+  {
+    "vehicle_id": "VH-1002",
+    "timestamp": "2026-10-20T04:01:00Z",
+    "speed_kmh": 61.8,
+    "engine_temp_c": 91.5,
+    "battery_voltage_v": 12.52,
+    "fuel_level_pct": 87.9,
+    "odometer_km": 25508.7
+  },
+  {
+    "vehicle_id": "VH-1002",
+    "timestamp": "2026-10-20T05:01:00Z",
+    "speed_kmh": 27.5,
+    "engine_temp_c": 91.2,
+    "battery_voltage_v": 13.77,
+    "fuel_level_pct": 24.1,
+    "odometer_km": 25508.1
+  },
+  {
+    "vehicle_id": "VH-1002",
+    "timestamp": "2026-10-20T06:01:00Z",
+    "speed_kmh": 129.4,
+    "engine_temp_c": 94.5,
+    "battery_voltage_v": 12.98,
+    "fuel_level_pct": 54.2,
+    "odometer_km": 25504.2
+  },
+  {
+    "vehicle_id": "VH-1002",
+    "timestamp": "2026-10-20T07:01:00Z",
+    "speed_kmh": 29.2,
+    "engine_temp_c": 85.1,
+    "battery_voltage_v": 13.39,
+    "fuel_level_pct": 26.9,
+    "odometer_km": 25508.3
+  },
+  {
+    "vehicle_id": "VH-1002",
+    "timestamp": "2026-10-20T08:01:00Z",
+    "speed_kmh": 9.2,
+    "engine_temp_c": 93.9,
+    "battery_voltage_v": 12.42,
+    "fuel_level_pct": 91.0,
+    "odometer_km": 25534.5
+  },
+  {
+    "vehicle_id": "VH-1002",
+    "timestamp": "2026-10-20T09:01:00Z",
+    "speed_kmh": 9.2,
+    "engine_temp_c": 82.1,
+    "battery_voltage_v": 13.61,
+    "fuel_level_pct": 25.4,
+    "odometer_km": 25506.7
+  },
+  {
+    "vehicle_id": "VH-1002",
+    "timestamp": "2026-10-20T10:01:00Z",
+    "speed_kmh": 121.6,
+    "engine_temp_c": 92.1,
+    "battery_voltage_v": 13.08,
+    "fuel_level_pct": 79.5,
+    "odometer_km": 25540.6
+  },
+  {
+    "vehicle_id": "VH-1002",
+    "timestamp": "2026-10-20T11:01:00Z",
+    "speed_kmh": 24.8,
+    "engine_temp_c": 77.9,
+    "battery_voltage_v": 12.96,
+    "fuel_level_pct": 45.2,
+    "odometer_km": 25526.3
+  },
+  {
+    "vehicle_id": "VH-1002",
+    "timestamp": "2026-10-20T12:01:00Z",
+    "speed_kmh": 94.8,
+    "engine_temp_c": 95.2,
+    "battery_voltage_v": 14.46,
+    "fuel_level_pct": 14.3,
+    "odometer_km": 25524.9
+  },
+  {
+    "vehicle_id": "VH-1002",
+    "timestamp": "2026-10-20T13:01:00Z",
+    "speed_kmh": 44.1,
+    "engine_temp_c": 100.9,
+    "battery_voltage_v": 12.47,
+    "fuel_level_pct": 23.1,
+    "odometer_km": 25529.9
+  },
+  {
+    "vehicle_id": "VH-1002",
+    "timestamp": "2026-10-20T14:01:00Z",
+    "speed_kmh": 54.8,
+    "engine_temp_c": 83.4,
+    "battery_voltage_v": 12.47,
+    "fuel_level_pct": 92.7,
+    "odometer_km": 25531.8
+  },
+  {
+    "vehicle_id": "VH-1002",
+    "timestamp": "2026-10-20T15:01:00Z",
+    "speed_kmh": 112.0,
+    "engine_temp_c": 91.5,
+    "battery_voltage_v": 11.94,
+    "fuel_level_pct": 99.9,
+    "odometer_km": 25562.9
+  },
+  {
+    "vehicle_id": "VH-1002",
+    "timestamp": "2026-10-20T16:01:00Z",
+    "speed_kmh": 126.0,
+    "engine_temp_c": 102.8,
+    "battery_voltage_v": 14.09,
+    "fuel_level_pct": 20.8,
+    "odometer_km": 25539.7
+  },
+  {
+    "vehicle_id": "VH-1002",
+    "timestamp": "2026-10-20T17:01:00Z",
+    "speed_kmh": 27.8,
+    "engine_temp_c": 87.0,
+    "battery_voltage_v": 11.96,
+    "fuel_level_pct": 41.0,
+    "odometer_km": 25583.8
+  },
+  {
+    "vehicle_id": "VH-1002",
+    "timestamp": "2026-10-20T18:01:00Z",
+    "speed_kmh": 34.5,
+    "engine_temp_c": 98.5,
+    "battery_voltage_v": 13.03,
+    "fuel_level_pct": 45.2,
+    "odometer_km": 25586.2
+  },
+  {
+    "vehicle_id": "VH-1002",
+    "timestamp": "2026-10-20T19:01:00Z",
+    "speed_kmh": 129.4,
+    "engine_temp_c": 91.7,
+    "battery_voltage_v": 13.74,
+    "fuel_level_pct": 19.7,
+    "odometer_km": 25529.5
+  },
+  {
+    "vehicle_id": "VH-1002",
+    "timestamp": "2026-10-20T20:01:00Z",
+    "speed_kmh": 125.9,
+    "engine_temp_c": 92.4,
+    "battery_voltage_v": 13.26,
+    "fuel_level_pct": 76.1,
+    "odometer_km": 25507.6
+  },
+  {
+    "vehicle_id": "VH-1002",
+    "timestamp": "2026-10-20T21:01:00Z",
+    "speed_kmh": 75.9,
+    "engine_temp_c": 90.1,
+    "battery_voltage_v": 14.1,
+    "fuel_level_pct": 20.0,
+    "odometer_km": 25601.0
+  },
+  {
+    "vehicle_id": "VH-1002",
+    "timestamp": "2026-10-20T22:01:00Z",
+    "speed_kmh": 10.4,
+    "engine_temp_c": 80.6,
+    "battery_voltage_v": 13.41,
+    "fuel_level_pct": 69.1,
+    "odometer_km": 25527.6
+  },
+  {
+    "vehicle_id": "VH-1002",
+    "timestamp": "2026-10-20T23:01:00Z",
+    "speed_kmh": 15.6,
+    "engine_temp_c": 101.7,
+    "battery_voltage_v": 12.46,
+    "fuel_level_pct": 61.5,
+    "odometer_km": 25572.1
+  },
+  {
+    "vehicle_id": "VH-1003",
+    "timestamp": "2026-10-20T00:02:00Z",
+    "speed_kmh": 54.5,
+    "engine_temp_c": 92.5,
+    "battery_voltage_v": 13.21,
+    "fuel_level_pct": 93.8,
+    "odometer_km": 26000.0
+  },
+  {
+    "vehicle_id": "VH-1003",
+    "timestamp": "2026-10-20T01:02:00Z",
+    "speed_kmh": 93.1,
+    "engine_temp_c": 82.2,
+    "battery_voltage_v": 12.87,
+    "fuel_level_pct": 68.8,
+    "odometer_km": 26001.6
+  },
+  {
+    "vehicle_id": "VH-1003",
+    "timestamp": "2026-10-20T02:02:00Z",
+    "speed_kmh": 41.1,
+    "engine_temp_c": 97.6,
+    "battery_voltage_v": 12.0,
+    "fuel_level_pct": 48.5,
+    "odometer_km": 26010.0
+  },
+  {
+    "vehicle_id": "VH-1003",
+    "timestamp": "2026-10-20T03:02:00Z",
+    "speed_kmh": 129.5,
+    "engine_temp_c": 77.2,
+    "battery_voltage_v": 12.38,
+    "fuel_level_pct": 30.2,
+    "odometer_km": 26014.0
+  },
+  {
+    "vehicle_id": "VH-1003",
+    "timestamp": "2026-10-20T04:02:00Z",
+    "speed_kmh": 114.5,
+    "engine_temp_c": 101.4,
+    "battery_voltage_v": 12.8,
+    "fuel_level_pct": 20.0,
+    "odometer_km": 26016.7
+  },
+  {
+    "vehicle_id": "VH-1003",
+    "timestamp": "2026-10-20T05:02:00Z",
+    "speed_kmh": 91.5,
+    "engine_temp_c": 93.4,
+    "battery_voltage_v": 14.47,
+    "fuel_level_pct": 67.1,
+    "odometer_km": 26000.7
+  },
+  {
+    "vehicle_id": "VH-1003",
+    "timestamp": "2026-10-20T06:02:00Z",
+    "speed_kmh": 106.2,
+    "engine_temp_c": 84.0,
+    "battery_voltage_v": 13.59,
+    "fuel_level_pct": 94.2,
+    "odometer_km": 26004.5
+  },
+  {
+    "vehicle_id": "VH-1003",
+    "timestamp": "2026-10-20T07:02:00Z",
+    "speed_kmh": 15.0,
+    "engine_temp_c": 78.2,
+    "battery_voltage_v": 13.29,
+    "fuel_level_pct": 30.9,
+    "odometer_km": 26021.4
+  },
+  {
+    "vehicle_id": "VH-1003",
+    "timestamp": "2026-10-20T08:02:00Z",
+    "speed_kmh": 93.3,
+    "engine_temp_c": 81.1,
+    "battery_voltage_v": 13.51,
+    "fuel_level_pct": 30.1,
+    "odometer_km": 26020.0
+  },
+  {
+    "vehicle_id": "VH-1003",
+    "timestamp": "2026-10-20T09:02:00Z",
+    "speed_kmh": 117.7,
+    "engine_temp_c": 100.4,
+    "battery_voltage_v": 12.05,
+    "fuel_level_pct": 45.2,
+    "odometer_km": 26013.1
+  },
+  {
+    "vehicle_id": "VH-1003",
+    "timestamp": "2026-10-20T10:02:00Z",
+    "speed_kmh": 0.5,
+    "engine_temp_c": 98.1,
+    "battery_voltage_v": 13.52,
+    "fuel_level_pct": 29.9,
+    "odometer_km": 26037.3
+  },
+  {
+    "vehicle_id": "VH-1003",
+    "timestamp": "2026-10-20T11:02:00Z",
+    "speed_kmh": 71.7,
+    "engine_temp_c": 87.8,
+    "battery_voltage_v": 11.83,
+    "fuel_level_pct": 12.1,
+    "odometer_km": 26048.7
+  },
+  {
+    "vehicle_id": "VH-1003",
+    "timestamp": "2026-10-20T12:02:00Z",
+    "speed_kmh": 117.5,
+    "engine_temp_c": 91.4,
+    "battery_voltage_v": 14.05,
+    "fuel_level_pct": 60.3,
+    "odometer_km": 26009.9
+  },
+  {
+    "vehicle_id": "VH-1003",
+    "timestamp": "2026-10-20T13:02:00Z",
+    "speed_kmh": 16.6,
+    "engine_temp_c": 84.2,
+    "battery_voltage_v": 14.23,
+    "fuel_level_pct": 80.6,
+    "odometer_km": 26056.1
+  },
+  {
+    "vehicle_id": "VH-1003",
+    "timestamp": "2026-10-20T14:02:00Z",
+    "speed_kmh": 116.9,
+    "engine_temp_c": 81.3,
+    "battery_voltage_v": 12.47,
+    "fuel_level_pct": 14.8,
+    "odometer_km": 26054.9
+  },
+  {
+    "vehicle_id": "VH-1003",
+    "timestamp": "2026-10-20T15:02:00Z",
+    "speed_kmh": 114.9,
+    "engine_temp_c": 87.2,
+    "battery_voltage_v": 13.48,
+    "fuel_level_pct": 19.7,
+    "odometer_km": 26069.8
+  },
+  {
+    "vehicle_id": "VH-1003",
+    "timestamp": "2026-10-20T16:02:00Z",
+    "speed_kmh": 112.4,
+    "engine_temp_c": 104.3,
+    "battery_voltage_v": 13.99,
+    "fuel_level_pct": 88.7,
+    "odometer_km": 26003.5
+  },
+  {
+    "vehicle_id": "VH-1003",
+    "timestamp": "2026-10-20T17:02:00Z",
+    "speed_kmh": 95.8,
+    "engine_temp_c": 85.0,
+    "battery_voltage_v": 14.31,
+    "fuel_level_pct": 81.2,
+    "odometer_km": 26073.7
+  },
+  {
+    "vehicle_id": "VH-1003",
+    "timestamp": "2026-10-20T18:02:00Z",
+    "speed_kmh": 105.4,
+    "engine_temp_c": 83.0,
+    "battery_voltage_v": 13.93,
+    "fuel_level_pct": 15.3,
+    "odometer_km": 26078.7
+  },
+  {
+    "vehicle_id": "VH-1003",
+    "timestamp": "2026-10-20T19:02:00Z",
+    "speed_kmh": 111.6,
+    "engine_temp_c": 81.7,
+    "battery_voltage_v": 14.0,
+    "fuel_level_pct": 48.7,
+    "odometer_km": 26030.3
+  },
+  {
+    "vehicle_id": "VH-1003",
+    "timestamp": "2026-10-20T20:02:00Z",
+    "speed_kmh": 103.4,
+    "engine_temp_c": 81.8,
+    "battery_voltage_v": 11.86,
+    "fuel_level_pct": 23.3,
+    "odometer_km": 26034.2
+  },
+  {
+    "vehicle_id": "VH-1003",
+    "timestamp": "2026-10-20T21:02:00Z",
+    "speed_kmh": 112.4,
+    "engine_temp_c": 104.0,
+    "battery_voltage_v": 12.55,
+    "fuel_level_pct": 65.9,
+    "odometer_km": 26043.2
+  },
+  {
+    "vehicle_id": "VH-1003",
+    "timestamp": "2026-10-20T22:02:00Z",
+    "speed_kmh": 127.5,
+    "engine_temp_c": 91.1,
+    "battery_voltage_v": 14.34,
+    "fuel_level_pct": 16.0,
+    "odometer_km": 26106.8
+  },
+  {
+    "vehicle_id": "VH-1003",
+    "timestamp": "2026-10-20T23:02:00Z",
+    "speed_kmh": 23.2,
+    "engine_temp_c": 103.9,
+    "battery_voltage_v": 12.52,
+    "fuel_level_pct": 15.3,
+    "odometer_km": 26051.3
+  }
+]
