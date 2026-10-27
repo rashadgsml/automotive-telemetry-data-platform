@@ -1,0 +1,32 @@
+
+version: 2
+
+models:
+  - name: fct_vehicle_daily_metrics
+    description: "Daily aggregated telemetry metrics for each vehicle."
+
+    columns:
+      - name: vehicle_id
+        description: "Identifier of the vehicle."
+        data_tests:
+          - not_null
+
+      - name: reading_date
+        description: "Calendar date of the telemetry readings."
+        data_tests:
+          - not_null
+
+      - name: total_readings
+        description: "Number of telemetry readings for the vehicle on that day."
+        data_tests:
+          - not_null
+
+      - name: avg_speed_kmh
+        description: "Average recorded speed for the day."
+        data_tests:
+          - not_null
+
+      - name: max_engine_temp_c
+        description: "Maximum recorded engine temperature for the day."
+        data_tests:
+          - not_null

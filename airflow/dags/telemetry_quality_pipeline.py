@@ -1,9 +1,11 @@
 
+import os
 from datetime import datetime, timezone
 
 import psycopg2
 from airflow import DAG
 from airflow.operators.python import PythonOperator
+from airflow.operators.bash import BashOperator
 
 
 DB_CONFIG = {
@@ -11,8 +13,11 @@ DB_CONFIG = {
     "port": 5432,
     "dbname": "telemetry_db",
     "user": "telemetry_user",
-    "password": "local_dev_password",
+    "password": os.environ["TELEMETRY_DB_PASSWORD"],
 }
+
+DBT_PROJECT_DIR = "/opt/airflow/telemetry_analytics"
+DBT_PROFILES_DIR = "/opt/airflow/dbt_profiles"
 
 
 def check_database_connection():
@@ -59,11 +64,11 @@ def check_telemetry_quality():
 
 with DAG(
     dag_id="telemetry_quality_pipeline",
-    description="Check telemetry database connectivity and data quality",
+    description="Validate telemetry data and build/test dbt analytics models",
     start_date=datetime(2026, 1, 1, tzinfo=timezone.utc),
     schedule=None,
     catchup=False,
-    tags=["telemetry", "data-quality"],
+    tags=["telemetry", "data-quality", "dbt"],
 ) as dag:
 
     database_check = PythonOperator(
@@ -76,4 +81,20 @@ with DAG(
         python_callable=check_telemetry_quality,
     )
 
-    database_check >> quality_check
+    dbt_run = BashOperator(
+        task_id="dbt_run",
+        bash_command=(
+            f"cd {DBT_PROJECT_DIR} && "
+            f"dbt run --profiles-dir {DBT_PROFILES_DIR}"
+        ),
+    )
+
+    dbt_test = BashOperator(
+        task_id="dbt_test",
+        bash_command=(
+            f"cd {DBT_PROJECT_DIR} && "
+            f"dbt test --profiles-dir {DBT_PROFILES_DIR}"
+        ),
+    )
+
+    database_check >> quality_check >> dbt_run >> dbt_test
