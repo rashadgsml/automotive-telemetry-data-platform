@@ -1,82 +1,94 @@
 # Automotive Telemetry Data Platform
 
-A containerized data engineering project that ingests, validates, stores, and transforms synthetic vehicle telemetry data. Built to explore reliable data pipelines, data quality checks, analytics modelling, and orchestration using Python and modern data engineering tools.
+A containerized data engineering project that ingests, validates, stores, and transforms synthetic vehicle telemetry data. It demonstrates data quality checks, analytical modelling, workflow orchestration, and REST API development using Python and modern data engineering tools.
+
+**Dataset:** Synthetic vehicle telemetry data; not sourced from BMW or any other vehicle manufacturer.
 
 ## Overview
 
-The platform processes vehicle sensor records, validates incoming data, stores telemetry in PostgreSQL, and exposes vehicle history and analytics through a FastAPI service. It also includes an Apache Airflow pipeline for database and data quality checks, alongside dbt models and tests for analytical transformations.
+The platform ingests vehicle sensor records from CSV and JSON files, validates them, stores valid records in PostgreSQL, and exposes telemetry history and analytical results through FastAPI.
 
-The dataset is synthetic and is not sourced from any vehicle manufacturer.
+Apache Airflow orchestrates database connectivity checks, telemetry quality checks, dbt transformations, and dbt tests. The analytics layer includes staging and daily vehicle metrics models.
 
 ## Architecture
 
 ```text
-Synthetic CSV / JSON Data
-          |
-          v
-Python Ingestion & Validation
-          |
-          v
-      PostgreSQL
-          |
-          +--------------------+
-          |                    |
-          v                    v
-     FastAPI API          Apache Airflow
-                               |
-                               v
-                     Database & Quality Checks
-
-PostgreSQL --> dbt Models --> Data Quality Tests
+          Synthetic CSV / JSON Data
+                     |
+                     v
+          Python Ingestion & Validation
+                     |
+                     v
+                 PostgreSQL
+                  /       \
+                 v         v
+           FastAPI API   Apache Airflow
+                            |
+                            v
+                     Database Checks
+                            |
+                            v
+                      Quality Checks
+                            |
+                            v
+                         dbt run
+                            |
+                            v
+                        dbt test
+                            |
+                            v
+                  Analytics Models
 ```
 
 ## Key Features
 
 - **Data ingestion:** Read telemetry records from CSV and JSON files.
-- **Data validation:** Detect missing fields, duplicate records, invalid sensor values, and invalid timestamps.
-- **Reliable database writes:** Store valid records in PostgreSQL and avoid duplicate inserts when processing the same dataset again.
-- **Ingestion tracking:** Record ingestion-run metadata, including record counts and rejected records.
-- **Analytics modelling:** Use dbt to create staging models and test data constraints.
-- **Automated checks:** Use pytest for application tests and Airflow to orchestrate database connectivity and telemetry quality checks.
-- **REST API:** Expose vehicle telemetry history and analytical endpoints through FastAPI.
-- **Containerization:** Run the API, PostgreSQL, and Airflow services using Docker Compose.
+- **Data validation:** Check required fields, duplicate records, timestamp validity, and sensor-value ranges.
+- **Reliable database writes:** Persist valid records in PostgreSQL and avoid duplicate inserts when reprocessing existing data.
+- **Ingestion tracking:** Record run metadata, including record counts and rejected records.
+- **Analytics modelling:** Use dbt to create staging and daily vehicle metrics models.
+- **Data quality testing:** Combine application tests, dbt schema tests, and SQL-based data quality assertions.
+- **Workflow orchestration:** Use Apache Airflow to orchestrate database checks, quality checks, dbt runs, and dbt tests.
+- **REST API:** Expose vehicle telemetry history and analytics through FastAPI.
+- **Containerization:** Run the API, PostgreSQL, and Airflow using Docker Compose.
 
 ## Technology Stack
 
-- Python
-- SQL and PostgreSQL
-- Apache Airflow
-- dbt Core and dbt-postgres
-- FastAPI
-- Docker and Docker Compose
-- pytest
+| Area | Technologies |
+|---|---|
+| Programming | Python, SQL |
+| Database | PostgreSQL |
+| API | FastAPI |
+| Analytics engineering | dbt Core, dbt-postgres |
+| Orchestration | Apache Airflow |
+| Testing | pytest, dbt tests |
+| Infrastructure | Docker, Docker Compose |
 
 ## Getting Started
 
 ### Prerequisites
 
-- Docker Desktop
 - Git
-- Python 3.13+ for local development
+- Docker Desktop
+- Python and a virtual environment for local development and testing
+- dbt Core and dbt-postgres for running dbt locally
 
 ### 1. Clone the repository
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
-cd "Automotive Telemetry Data Platform"
+git clone https://github.com/rashadgsml/automotive-telemetry-data-platform.git
+cd automotive-telemetry-data-platform
 ```
 
 ### 2. Configure environment variables
-
-Create your local `.env` file using the example:
 
 ```bash
 cp .env.example .env
 ```
 
-Review the values in `.env` before starting the services. Use local development credentials only, and do not commit `.env` to Git.
+Review the local development values in `.env`. Never commit real credentials or secrets.
 
-### 3. Start the application and database
+### 3. Start PostgreSQL and the API
 
 From the project root:
 
@@ -86,67 +98,119 @@ docker compose --env-file .env up -d --build
 
 ### 4. Start Airflow
 
-From the project root, in a separate terminal:
-
 ```bash
 docker compose --env-file .env -f airflow/compose.yaml up -d --build
 ```
 
-Airflow's web interface is available at:
+### 5. Access the services
 
-`http://localhost:8080`
+| Service | URL |
+|---|---|
+| FastAPI | http://localhost:8000 |
+| Interactive API documentation | http://localhost:8000/docs |
+| Airflow UI | http://localhost:8080 |
 
-The API is available at:
+Use the Airflow credentials configured for your local environment. Do not use development credentials in a publicly deployed environment.
 
-`http://localhost:8000`
+### 6. Run application tests
 
-Interactive API documentation:
-
-`http://localhost:8000/docs`
-
-### 5. Run the tests
-
-Run the project's automated tests using the configured Python environment:
+Activate the project's virtual environment, then run:
 
 ```bash
 pytest
 ```
 
-### 6. Run dbt
+### 7. Run dbt locally
 
-With the telemetry database running and the local dbt profile configured:
+Ensure the local dbt profile in `~/.dbt/profiles.yml` points to the correct PostgreSQL host, port, database, and credentials.
 
 ```bash
-dbt debug --project-dir telemetry_analytics
-dbt run --project-dir telemetry_analytics
-dbt test --project-dir telemetry_analytics
+dbt debug --project-dir telemetry_analytics --profiles-dir "$HOME/.dbt"
+dbt run --project-dir telemetry_analytics --profiles-dir "$HOME/.dbt"
+dbt test --project-dir telemetry_analytics --profiles-dir "$HOME/.dbt"
 ```
 
-The dbt profile must point to the correct PostgreSQL host, port, database, and credentials for your execution environment.
+The Airflow containers use their own dbt profile and database connection configuration.
 
-## Data Quality and Analytics
+## Analytics
 
-The project includes checks for required fields, sensor-value ranges, duplicate records, and timestamp validity. dbt adds tests for model uniqueness, non-null fields, and sensor constraints.
+The daily vehicle metrics model calculates measures such as:
 
-The staging model provides a cleaned and consistently named representation of telemetry data for downstream analytics. SQL views support daily vehicle summaries and metrics.
+- Total telemetry readings per vehicle and day
+- Average and maximum recorded speed
+- Maximum engine temperature
+- Minimum battery voltage and fuel level
+- Starting and ending odometer readings
+- Estimated daily distance based on the difference between the maximum and minimum odometer readings
+
+The distance metric is an estimate derived from recorded odometer values, not a separate measurement of distance travelled.
+
+
+## Example API Response
+
+Request:
+
+```http
+GET /analytics/vehicles
+```
+
+Example response (abridged):
+
+```json
+{
+  "vehicles": [
+    {
+      "vehicle_id": "VH-1001",
+      "record_count": 24,
+      "average_speed_kmh": 67.93,
+      "average_engine_temp_c": 89.41,
+      "max_speed_kmh": 128.6
+    },
+    {
+      "vehicle_id": "VH-1002",
+      "record_count": 24,
+      "average_speed_kmh": 62.85,
+      "average_engine_temp_c": 89.36,
+      "max_speed_kmh": 129.4
+    },
+    {
+      "vehicle_id": "VH-1003",
+      "record_count": 24,
+      "average_speed_kmh": 86.93,
+      "average_engine_temp_c": 89.7,
+      "max_speed_kmh": 129.5
+    }
+  ],
+  "count": 3
+}
+```
+
+The API also provides individual vehicle telemetry history through `GET /vehicles/{vehicle_id}/telemetry`. Interactive endpoint documentation is available at `/docs`.
+
+These figures are generated from synthetic telemetry data and demonstrate the API's analytical output, not real vehicle performance.
+
 
 ## Current Status
 
 Implemented:
-- Python ingestion and validation
-- PostgreSQL persistence and ingestion-run tracking
-- FastAPI endpoints for telemetry and analytics
-- Docker Compose setup for the API and database
-- Airflow database and telemetry quality checks
-- dbt staging model and data quality tests
 
-Next improvements:
-- Integrate dbt execution into the Airflow DAG
-- Add intermediate and analytics-ready dbt models
-- Introduce incremental processing for larger datasets
-- Add pipeline logging, failure handling, and monitoring
-- Add CI checks through GitHub Actions
+- CSV and JSON ingestion with validation
+- PostgreSQL persistence and ingestion-run tracking
+- Duplicate handling and rejected-record reporting
+- FastAPI telemetry and analytics endpoints
+- dbt staging and daily metrics models
+- dbt schema tests and SQL-based assertions
+- Airflow orchestration of database checks, quality checks, dbt execution, and tests
+- Docker Compose configurations for the application and Airflow
+
+## Future Improvements
+
+- Incremental processing and late-arriving data handling
+- Larger datasets and distributed processing with PySpark
+- CI checks using GitHub Actions
+- Additional monitoring, logging, and failure-recovery mechanisms
+- Cloud deployment
 
 ## Purpose
 
-This project demonstrates practical work with data ingestion, SQL transformations, validation, testing, orchestration, and containerized services. It is designed as a foundation for further development toward production-style data engineering pipelines.
+This project demonstrates practical data engineering concepts through an end-to-end telemetry pipeline, combining ingestion, validation, SQL transformations, testing, orchestration, and API development. It is a portfolio project and a foundation for further improvements toward production-style data systems.
